@@ -1,0 +1,53 @@
+{
+  "name": "@fatomate/onpay-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol (MCP) server for the OnPay API — query sales records and update shipping info from any MCP client.",
+  "type": "module",
+  "bin": {
+    "onpay-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "onpay",
+    "claude",
+    "ai",
+    "llm",
+    "sales",
+    "ecommerce"
+  ],
+  "author": "aiman.iskandar2021@gmail.com",
+  "license": "MIT",
+  "homepage": "https://github.com/fatomate/onpay-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatomate/onpay-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fatomate/onpay-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}

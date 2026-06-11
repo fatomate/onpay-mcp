@@ -1,0 +1,11 @@
+{
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "ai.smithery/renCosta2025-context7fork"
+  ],
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:onpaysb.github.io)"
+    ]
+  }
+}
