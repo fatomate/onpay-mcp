@@ -1,0 +1,8 @@
+.git
+.github
+src
+tsconfig.json
+*.map
+*.ts
+.claude
+_logs

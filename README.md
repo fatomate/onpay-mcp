@@ -1,5 +1,8 @@
 # onpay-mcp
 
+[![npm version](https://img.shields.io/npm/v/@fatomate/onpay-mcp.svg)](https://www.npmjs.com/package/@fatomate/onpay-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 An [MCP](https://modelcontextprotocol.io) server that exposes the
 [OnPay API v1](https://onpaysb.github.io/docs/developer/api-v1.html) as tools
 any AI assistant (Claude Desktop, Claude Code, Cursor, Windsurf, …) can call.

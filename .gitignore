@@ -6,3 +6,6 @@ dist/
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# mcpb bundle (attached to GitHub releases, not committed)
+*.mcpb

@@ -1,0 +1,60 @@
+{
+  "manifest_version": "0.2",
+  "name": "onpay-mcp",
+  "display_name": "OnPay",
+  "version": "0.1.1",
+  "description": "Query OnPay sales records and update shipping info from your AI assistant.",
+  "long_description": "An MCP server for the OnPay API. Exposes three tools — list sales, get a sale, and update shipping info — to any compatible AI client. Unofficial, community-maintained.",
+  "author": {
+    "name": "Fatomate",
+    "email": "developer@fames.my",
+    "url": "https://github.com/fatomate"
+  },
+  "homepage": "https://github.com/fatomate/onpay-mcp",
+  "documentation": "https://github.com/fatomate/onpay-mcp#readme",
+  "license": "MIT",
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/index.js"],
+      "env": {
+        "ONPAY_TOKEN": "${user_config.onpay_token}",
+        "ONPAY_ACCOUNT": "${user_config.onpay_account}",
+        "ONPAY_BASE_URL": "${user_config.onpay_base_url}"
+      }
+    }
+  },
+  "tools": [
+    { "name": "sales_list", "description": "List sale records (paginated, filterable, sortable)." },
+    { "name": "sales_get", "description": "Get a single sale record by ID." },
+    { "name": "sales_update_shipping_info", "description": "Set courier + tracking code for a sale." }
+  ],
+  "user_config": {
+    "onpay_token": {
+      "type": "string",
+      "title": "OnPay API Token",
+      "description": "From Tetapan > Sistem > API & Webhook.",
+      "sensitive": true,
+      "required": true
+    },
+    "onpay_account": {
+      "type": "string",
+      "title": "Account Subdomain",
+      "description": "The 'acme' in https://acme.onpay.my. Fill this OR Base URL.",
+      "required": false
+    },
+    "onpay_base_url": {
+      "type": "string",
+      "title": "Custom Domain Base URL",
+      "description": "Full API base URL if you use a custom domain, e.g. https://shop.example.com/api/v1. Fill this OR Account Subdomain.",
+      "required": false
+    }
+  },
+  "compatibility": {
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
+}
