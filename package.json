@@ -1,6 +1,6 @@
 {
   "name": "@fatomate/onpay-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Model Context Protocol (MCP) server for the OnPay API — query sales records and update shipping info from any MCP client.",
   "type": "module",
   "bin": {
