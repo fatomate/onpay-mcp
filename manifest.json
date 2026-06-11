@@ -2,7 +2,7 @@
   "manifest_version": "0.2",
   "name": "onpay-mcp",
   "display_name": "OnPay",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Query OnPay sales records and update shipping info from your AI assistant.",
   "long_description": "An MCP server for the OnPay API. Exposes three tools — list sales, get a sale, and update shipping info — to any compatible AI client. Unofficial, community-maintained.",
   "author": {
@@ -18,7 +18,9 @@
     "entry_point": "dist/index.js",
     "mcp_config": {
       "command": "node",
-      "args": ["${__dirname}/dist/index.js"],
+      "args": [
+        "${__dirname}/dist/index.js"
+      ],
       "env": {
         "ONPAY_TOKEN": "${user_config.onpay_token}",
         "ONPAY_ACCOUNT": "${user_config.onpay_account}",
@@ -27,9 +29,18 @@
     }
   },
   "tools": [
-    { "name": "sales_list", "description": "List sale records (paginated, filterable, sortable)." },
-    { "name": "sales_get", "description": "Get a single sale record by ID." },
-    { "name": "sales_update_shipping_info", "description": "Set courier + tracking code for a sale." }
+    {
+      "name": "sales_list",
+      "description": "List sale records (paginated, filterable, sortable)."
+    },
+    {
+      "name": "sales_get",
+      "description": "Get a single sale record by ID."
+    },
+    {
+      "name": "sales_update_shipping_info",
+      "description": "Set courier + tracking code for a sale."
+    }
   ],
   "user_config": {
     "onpay_token": {
